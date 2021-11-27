@@ -21,4 +21,10 @@ ul, li{
     list-style: none;
 }
 
+.container-app{
+    max-width: 1260px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
 `;
