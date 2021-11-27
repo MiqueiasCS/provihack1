@@ -52,5 +52,4 @@ export const Login = () => {
             <button type="submit">Enviar</button>
         </form>
     )
-    
 }
