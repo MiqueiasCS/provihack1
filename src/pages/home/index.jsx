@@ -1,50 +1,16 @@
-import { Container, Header, Footer, Main, Cabecalho } from "./styles";
+import { Container, Main } from "./styles";
 import FirstImage from "../../assets/image.png";
 import SecondIMage from "../../assets/image_2.png";
-import Logo from "../../assets/logo.png";
-import { CgHeart, CgFacebook } from "react-icons/cg";
+import { CgHeart } from "react-icons/cg";
 import { BiBriefcaseAlt } from "react-icons/bi";
-import { RiUserSmileLine, RiTwitterFill } from "react-icons/ri";
-import { FiInstagram } from "react-icons/fi";
-import { AiFillLinkedin } from "react-icons/ai";
-import { FaUniversalAccess } from "react-icons/fa";
+import { RiUserSmileLine } from "react-icons/ri";
+import { Header } from "../../componentes/header";
+import { Footer } from "../../componentes/footer";
 
 export const Home = () => {
   return (
     <Container>
-      <Cabecalho>
-        <nav className="usertype">
-          <ul>
-            <li>Para candidatos</li>
-            <li>Para empresas</li>
-          </ul>
-        </nav>
-        <nav className="accessibility">
-          <ul>
-            <li>
-              <span>Torne o site acessível</span> <FaUniversalAccess />
-            </li>
-          </ul>
-        </nav>
-      </Cabecalho>
-      <hr className="top" />
-      <Header>
-        <div>
-          <img src={Logo} alt="logo" />
-        </div>
-        <div className="menu-navegacao">
-          <nav>
-            <ul>
-              <li>Home</li>
-              <li>Quem somos</li>
-              <li>Vagas</li>
-              <li>Comunidades</li>
-              <li>Login</li>
-            </ul>
-          </nav>
-          <button>Cadastre-se</button>
-        </div>
-      </Header>
+      <Header />
 
       <Main>
         {/* first session */}
@@ -127,37 +93,10 @@ export const Home = () => {
           </div>
         </div>
       </Main>
-      {/* six session */}
       <hr className="footer" />
-      <Footer>
-        <div>
-          <img src={Logo} alt="logo" />
-        </div>
-        <section>
-          <div className="contato">
-            <h3>Contato</h3>
-            <p>atendimento@nossonome.com.br</p>
-            <p>(00) 00000-0000</p>
-          </div>
 
-          <div className="endereco">
-            <h3>Endereço</h3>
-            <p>Av. LOrem Ipsum, 20 - 3 Andar</p>
-            <p>Bairro Cidade - Estado</p>
-            <p>CEP</p>
-          </div>
-
-          <div className="redes_socias">
-            <h3>Nossas redes sociais</h3>
-            <div>
-              <CgFacebook />
-              <FiInstagram />
-              <RiTwitterFill />
-              <AiFillLinkedin />
-            </div>
-          </div>
-        </section>
-      </Footer>
+      {/* six session */}
+      <Footer />
     </Container>
   );
 };

@@ -1,7 +1,12 @@
+import { Container } from "./styles";
+import { Header } from "../../componentes/header";
+import { Footer } from "../../componentes/footer";
+
 export const Dashboard = () => {
   return (
-    <div>
-      <h1>DashBOard</h1>
-    </div>
+    <Container>
+      <Header />
+      <Footer />
+    </Container>
   );
 };
