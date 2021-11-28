@@ -4,8 +4,12 @@ import { Footer } from "../../componentes/footer";
 import { NextPage } from "../../componentes/nextPage";
 import { Search } from "../../componentes/search/search";
 import { ContainerPersonCardUser } from "../../components/containerCardUser";
+import { useContext } from "react";
+import { UsersContext } from "../../providers/users";
 
 export const Dashboard = () => {
+  const { users } = useContext(UsersContext);
+
   return (
     <Container>
       <Header />
@@ -19,6 +23,7 @@ export const Dashboard = () => {
       <div className="next_page">
         <NextPage />
       </div>
+      <button onClick={() => console.log(users)}>usuarios cadastrados</button>
       <Footer />
     </Container>
   );
