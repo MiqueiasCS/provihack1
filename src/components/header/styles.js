@@ -30,7 +30,7 @@ export const Cabecalho = styled.section`
         }
       }
 
-      li:first-child {
+      li:nth-child(2){
         color: #41b57d;
       }
     }
@@ -80,16 +80,14 @@ export const MainHeader = styled.header`
 
       li {
         cursor: pointer;
+        color: black;
 
         :hover {
           color: #41b57d;
           transition: 0.5s;
         }
       }
-
-      li:first-child {
-        color: #41b57d;
-      }
+      
     }
 
     button {
@@ -101,6 +99,10 @@ export const MainHeader = styled.header`
       font-weight: bold;
       font-size: 14px;
       text-transform: uppercase;
+      :hover{
+        filter: brightness(0.9);
+        transition: 0.5s;
+      }
     }
   }
 `;
