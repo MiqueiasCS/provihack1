@@ -7,31 +7,29 @@ import {ContainerLogin,
         Form,
         ContainerAccess} from "./style"
 
-
 export const Login = () => {
+  const schema = yup.object().shape({
+    email: yup.string().email("Email Inválido!").required("Campo Obrigatório!"),
+    password: yup
+      .string()
+      .min(8, "Mínimo de 8 caracteres!")
+      .matches(
+        /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$ %^&*-]).{8,}$/,
+        "A senha deve conter pelo menos uma letra maiúscula, um número e um caractere especial!"
+      ),
+  });
 
-    const schema = yup.object().shape({
-        email: yup.string().email("Email Inválido!").required("Campo Obrigatório!"),
-        password: yup
-          .string()
-          .min(8, "Mínimo de 8 caracteres!")
-          .matches(
-            /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$ %^&*-]).{8,}$/,
-            "A senha deve conter pelo menos uma letra maiúscula, um número e um caractere especial!"
-          ),
-      });
-
-    const {
+  const {
     register,
     handleSubmit,
     formState: { errors },
     reset,
-      } = useForm({ resolver: yupResolver(schema) });
+  } = useForm({ resolver: yupResolver(schema) });
 
-    const handleMyForm = (data) => {
-        console.log(data)
-        reset();
-    };
+  const handleMyForm = (data) => {
+    console.log(data);
+    reset();
+  };
 
     return(
         <ContainerLogin>

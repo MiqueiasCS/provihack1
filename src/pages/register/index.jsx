@@ -4,7 +4,7 @@ import { useForm } from "react-hook-form";
 import { ContainerForm, ContainerText, ContainerLabel, ContainerFlex } from './style';
 
 export const Register = () => {
-
+  
   const schema = yup.object().shape({
     name: yup
       .string()

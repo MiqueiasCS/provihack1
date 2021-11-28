@@ -15,6 +15,7 @@ a{
 
 button{
     cursor: pointer;
+    border: none;
 }
 
 ul, li{
@@ -25,6 +26,7 @@ ul, li{
     max-width: 1260px;
     margin: 0 auto;
     padding: 20px;
+    font-family: 'Inter', sans-serif;
 }
 
 `;
