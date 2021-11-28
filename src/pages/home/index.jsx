@@ -1,6 +1,7 @@
 import { Container, Header, Footer, Main } from "./styles";
 import FirstImage from "../../assets/image.png";
 import SecondIMage from "../../assets/image_2.png";
+import Logo from "../../assets/logo.png";
 import { CgHeart, CgFacebook } from "react-icons/cg";
 import { BiBriefcaseAlt } from "react-icons/bi";
 import { RiUserSmileLine, RiTwitterFill } from "react-icons/ri";
@@ -12,7 +13,7 @@ export const Home = () => {
     <Container>
       <Header>
         <div>
-          <h2>Logo</h2>
+          <img src={Logo} alt="logo" />
         </div>
         <div className="menu-navegacao">
           <nav>
@@ -112,7 +113,7 @@ export const Home = () => {
       {/* six session */}
       <Footer>
         <div>
-          <h2>Logo</h2>
+          <img src={Logo} alt="logo" />
         </div>
         <section>
           <div className="contato">

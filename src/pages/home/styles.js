@@ -12,7 +12,7 @@ export const Header = styled.header`
   .menu-navegacao {
     display: flex;
     justify-content: space-evenly;
-    width: 560px;
+    width: 590px;
     align-items: center;
 
     nav ul {
@@ -34,10 +34,11 @@ export const Header = styled.header`
       background-color: #41b57d;
       border-radius: 6px;
       color: #ffffff;
-      width: 100px;
-      height: 40px;
+      width: 130px;
+      height: 50px;
       font-weight: bold;
       font-size: 14px;
+      text-transform: uppercase;
     }
   }
 `;
@@ -77,6 +78,7 @@ export const Main = styled.main`
         font-weight: bold;
         font-size: 14px;
         padding: 18px 32px;
+        text-transform: uppercase;
       }
     }
 
@@ -192,6 +194,7 @@ export const Main = styled.main`
           color: #41b57d;
           font-weight: bold;
           font-size: 14px;
+          text-transform: uppercase;
         }
       }
     }
