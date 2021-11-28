@@ -1,6 +1,5 @@
 import { MainHeader, Container, Cabecalho } from "./styles";
 import { FaUniversalAccess } from "react-icons/fa";
-
 import Logo from "../../assets/logo.png";
 
 export const Header = () => {

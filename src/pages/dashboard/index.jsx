@@ -2,7 +2,7 @@ import { Container } from "./styles";
 import { Header } from "../../componentes/header";
 import { Footer } from "../../componentes/footer";
 import { NextPage } from "../../componentes/nextPage";
-import { Search } from "../../componentes/search";
+import { Search } from "../../componentes/search/search";
 
 export const Dashboard = () => {
   return (
