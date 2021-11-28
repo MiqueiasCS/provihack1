@@ -1,10 +1,20 @@
 import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { useForm } from "react-hook-form";
-import { ContainerForm, ContainerText, ContainerLabel, ContainerFlex } from './style';
+import {
+  ContainerForm,
+  ContainerText,
+  ContainerLabel,
+  ContainerFlex,
+} from "./style";
+import { useContext } from "react";
+import { UsersContext } from "../../providers/users";
+import { useNavigate } from "react-router-dom";
 
 export const Register = () => {
-  
+  const { createUser } = useContext(UsersContext);
+  const navigate = useNavigate();
+
   const schema = yup.object().shape({
     name: yup
       .string()
@@ -14,42 +24,41 @@ export const Register = () => {
         "Apenas alfabetos são permitidos para este campo!"
       ),
     email: yup.string().email("Email Inválido!").required("Campo Obrigatório!"),
-    cargo: yup.string().required("Campo Obrigatório!"),
+    function: yup.string().required("Campo Obrigatório!"),
     nivel: yup.string().required("Campo Obrigatório!"),
     city: yup.string().required("Campo Obrigatório!"),
     state: yup.string().required("Campo Obrigatório!"),
-    link_curriculo: yup.string().required("Campo Obrigatório!"),
+    url: yup.string().required("Campo Obrigatório!"),
     description: yup.string().required("Campo Obrigatório!"),
     password: yup
       .string()
       .min(8, "Mínimo de 8 caracteres!")
       .matches(
-          /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$ %^&*-]).{8,}$/,
-          "A senha deve conter pelo menos uma letra maiúscula, um número e um caractere especial!"
-        ).required("Campo Obrigatório!")    
-      });
+        /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$ %^&*-]).{8,}$/,
+        "A senha deve conter pelo menos uma letra maiúscula, um número e um caractere especial!"
+      )
+      .required("Campo Obrigatório!"),
+  });
 
   const {
-      register,
-      handleSubmit,
-      formState: { errors },
-      reset,
+    register,
+    handleSubmit,
+    formState: { errors },
+    reset,
   } = useForm({ resolver: yupResolver(schema) });
 
-
   const handleMyForm = (data) => {
-      console.log(data);
-      reset();
+    createUser(data, navigate);
+    reset();
   };
 
-
-  return(
-
+  return (
     <ContainerForm>
-
       <ContainerText>
         <h2>Cadastro</h2>
-        <p>Já possui uma conta? <strong>Entrar</strong></p>
+        <p>
+          Já possui uma conta? <strong>Entrar</strong>
+        </p>
       </ContainerText>
 
       <ContainerText>
@@ -57,29 +66,28 @@ export const Register = () => {
       </ContainerText>
 
       <form onSubmit={handleSubmit(handleMyForm)}>
-
         {/* NOME */}
 
         <ContainerLabel>
           <label>Nome Completo</label>
           <input
-              type="text"
-              placeholder="Digite o seu nome"
-              {...register("name")}
+            type="text"
+            placeholder="Digite o seu nome"
+            {...register("name")}
           />
           <span className="text-error">{errors.name?.message}</span>
         </ContainerLabel>
-        
+
         {/* E-MAIL */}
 
         <ContainerLabel>
           <label>E-mail</label>
-            <input
-                type="email"
-                placeholder="Digite o seu e-mail"
-                {...register("email")}
-            />
-            <span className="text-error">{errors.email?.message}</span>
+          <input
+            type="email"
+            placeholder="Digite o seu e-mail"
+            {...register("email")}
+          />
+          <span className="text-error">{errors.email?.message}</span>
         </ContainerLabel>
 
         {/* CARGO E NIVEL */}
@@ -87,12 +95,12 @@ export const Register = () => {
         <ContainerFlex>
           <ContainerLabel>
             <label>Cargo</label>
-            <input 
+            <input
               type="text"
               placeholder="Digite o seu cargo"
-              {...register("cargo")}
+              {...register("function")}
             />
-            <span className="text-error">{errors.cargo?.message}</span>
+            <span className="text-error">{errors.function?.message}</span>
           </ContainerLabel>
 
           <ContainerLabel>
@@ -106,7 +114,7 @@ export const Register = () => {
           </ContainerLabel>
         </ContainerFlex>
 
-          {/* CIDADE E ESTADO */}
+        {/* CIDADE E ESTADO */}
 
         <ContainerFlex>
           <ContainerLabel>
@@ -121,10 +129,7 @@ export const Register = () => {
 
           <ContainerLabel>
             <label>UF</label>
-            <select
-              name="estados-brasil"
-              {...register("state")}
-              >
+            <select name="estados-brasil" {...register("state")}>
               <option value="AC">Acre</option>
               <option value="AL">Alagoas</option>
               <option value="AP">Amapá</option>
@@ -158,28 +163,28 @@ export const Register = () => {
 
         <ContainerLabel>
           <label>Link do currículo</label>
-          <input 
+          <input
             type="text"
             placeholder="Digite o seu currículo"
-            {...register("link_curriculo")}
+            {...register("url")}
           />
-          <span className="text-error">{errors.link_curriculo?.message}</span>
+          <span className="text-error">{errors.url?.message}</span>
         </ContainerLabel>
 
         <ContainerLabel>
           <label>Descrição</label>
-          <textarea placeholder="Digite em poucas palavras uma descrição sobre você"
-            rows="4" 
+          <textarea
+            placeholder="Digite em poucas palavras uma descrição sobre você"
+            rows="4"
             cols="50"
             {...register("description")}
-          >
-          </textarea>
+          ></textarea>
           <span className="text-error">{errors.description?.message}</span>
         </ContainerLabel>
 
         <ContainerLabel>
           <label>Criar senha</label>
-          <input 
+          <input
             type="password"
             placeholder="Digite uma senha"
             {...register("password")}
