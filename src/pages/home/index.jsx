@@ -1,4 +1,4 @@
-import { Container, Header, Footer, Main } from "./styles";
+import { Container, Header, Footer, Main, Cabecalho } from "./styles";
 import FirstImage from "../../assets/image.png";
 import SecondIMage from "../../assets/image_2.png";
 import Logo from "../../assets/logo.png";
@@ -7,10 +7,27 @@ import { BiBriefcaseAlt } from "react-icons/bi";
 import { RiUserSmileLine, RiTwitterFill } from "react-icons/ri";
 import { FiInstagram } from "react-icons/fi";
 import { AiFillLinkedin } from "react-icons/ai";
+import { FaUniversalAccess } from "react-icons/fa";
 
 export const Home = () => {
   return (
     <Container>
+      <Cabecalho>
+        <nav className="usertype">
+          <ul>
+            <li>Para candidatos</li>
+            <li>Para empresas</li>
+          </ul>
+        </nav>
+        <nav className="accessibility">
+          <ul>
+            <li>
+              <span>Torne o site acessível</span> <FaUniversalAccess />
+            </li>
+          </ul>
+        </nav>
+      </Cabecalho>
+      <hr className="top" />
       <Header>
         <div>
           <img src={Logo} alt="logo" />
@@ -111,6 +128,7 @@ export const Home = () => {
         </div>
       </Main>
       {/* six session */}
+      <hr className="footer" />
       <Footer>
         <div>
           <img src={Logo} alt="logo" />
