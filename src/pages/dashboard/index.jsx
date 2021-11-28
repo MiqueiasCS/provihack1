@@ -1,8 +1,8 @@
 import { Container } from "./styles";
-import { Header } from "../../componentes/header";
-import { Footer } from "../../componentes/footer";
-import { NextPage } from "../../componentes/nextPage";
-import { Search } from "../../componentes/search/search";
+import { Header } from "../../components/header";
+import { Footer } from "../../components/footer";
+import { NextPage } from "../../components/nextPage";
+import { Search } from "../../components/search";
 import { ContainerPersonCardUser } from "../../components/containerCardUser";
 import { useContext } from "react";
 import { UsersContext } from "../../providers/users";

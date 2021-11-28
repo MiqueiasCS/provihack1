@@ -4,8 +4,8 @@ import SecondIMage from "../../assets/image_2.png";
 import { CgHeart } from "react-icons/cg";
 import { BiBriefcaseAlt } from "react-icons/bi";
 import { RiUserSmileLine } from "react-icons/ri";
-import { Header } from "../../componentes/header";
-import { Footer } from "../../componentes/footer";
+import { Header } from "../../components/header";
+import { Footer } from "../../components/footer";
 
 export const Home = () => {
   return (

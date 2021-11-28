@@ -7,7 +7,9 @@ import { PersonCard } from "../cardUser";
 export const ContainerPersonCardUser = () => {
     
     // const { personData } = useContext(PersonaContext);
-    const { users } = useContext(UsersContext)
+    const { users } = useContext(UsersContext);
+
+    console.log('Container', users)
 
     return(
         <div>
