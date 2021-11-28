@@ -6,8 +6,22 @@ import { BiBriefcaseAlt } from "react-icons/bi";
 import { RiUserSmileLine } from "react-icons/ri";
 import { Header } from "../../components/header";
 import { Footer } from "../../components/footer";
+import { useNavigate } from "react-router-dom";
+
 
 export const Home = () => {
+
+  const navigate = useNavigate();
+
+  const handleToPageCommunity = () => {
+    navigate("/community")
+  }
+
+  const handleToPageRegister = () => {
+    navigate("/register")
+  }
+
+
   return (
     <Container>
       <Header />
@@ -21,7 +35,7 @@ export const Home = () => {
               As melhores empresas utilizam o nosso banco de talentos 100% para
               PDC
             </p>
-            <button>Cadastrar Currículo</button>
+            <button onClick={handleToPageRegister}>Cadastrar Currículo</button>
           </div>
           <div className="first_image">
             <img src={FirstImage} alt="imagem_1" />
@@ -62,7 +76,7 @@ export const Home = () => {
           </div>
           <div>
             <BiBriefcaseAlt />
-            <h2>Focamos em pessoas</h2>
+            <h2>Melhores empresas</h2>
             <p>
               Lorem ipsum dolor sit, amet consectetur adipisicing elit.
               Quibusdam at obcaecati molestias vero numquam, fuga.
@@ -70,7 +84,7 @@ export const Home = () => {
           </div>
           <div>
             <CgHeart />
-            <h2>Focamos em pessoas</h2>
+            <h2>Respiramos inclusão</h2>
             <p>
               Lorem ipsum dolor sit, amet consectetur adipisicing elit.
               Quibusdam at obcaecati molestias vero numquam, fuga.
@@ -88,7 +102,7 @@ export const Home = () => {
               </p>
             </div>
             <div>
-              <button>Comunidade</button>
+              <button onClick={ handleToPageCommunity }>Comunidade</button>
             </div>
           </div>
         </div>
