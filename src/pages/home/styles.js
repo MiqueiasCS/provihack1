@@ -2,16 +2,80 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   width: 100%;
+
+  hr.top {
+    border: 1px solid rgba(209, 209, 209, 0.2);
+    margin-bottom: 24px;
+  }
+
+  hr.footer {
+    border: 1px solid rgba(209, 209, 209, 0.6);
+  }
+`;
+
+export const Cabecalho = styled.section`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 16px 0;
+
+  .usertype {
+    ul {
+      display: flex;
+      width: 250px;
+      justify-content: space-between;
+      align-items: center;
+
+      li {
+        font-size: 14px;
+        cursor: pointer;
+
+        :hover {
+          color: #41b57d;
+          transition: 0.5s;
+        }
+      }
+
+      li:first-child {
+        color: #41b57d;
+      }
+    }
+  }
+  .accessibility {
+    ul {
+      li {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 180px;
+        cursor: pointer;
+
+        span {
+          font-size: 14px;
+        }
+
+        svg {
+          font-size: 20px;
+        }
+
+        :hover {
+          color: #41b57d;
+          transition: 0.5s;
+        }
+      }
+    }
+  }
 `;
 
 export const Header = styled.header`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin: 10px 0;
 
   .menu-navegacao {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     width: 590px;
     align-items: center;
 
@@ -27,6 +91,10 @@ export const Header = styled.header`
           color: #41b57d;
           transition: 0.5s;
         }
+      }
+
+      li:first-child {
+        color: #41b57d;
       }
     }
 
@@ -73,7 +141,7 @@ export const Main = styled.main`
         background-color: #41b57d;
         border-radius: 6px;
         color: #ffffff;
-        width: 234px;
+        width: 254px;
         height: 53px;
         font-weight: bold;
         font-size: 14px;
@@ -214,7 +282,7 @@ export const Footer = styled.footer`
   section {
     display: flex;
     justify-content: space-between;
-    width: 1100px;
+    width: 1040px;
 
     div {
       h3 {
