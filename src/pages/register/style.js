@@ -29,8 +29,10 @@ export const ContainerForm = styled.div`
     }
 
     input{
+        
         border: 2px solid #808080;
         border-radius: 5px;
+
         :focus{
             border:2px solid #41b57d;
         }
@@ -38,7 +40,19 @@ export const ContainerForm = styled.div`
 `;
 
 export const ContainerText = styled.div`
+
     margin: 20px 0px;
+
+    .input-photo{
+
+        padding: 15px 10px;
+        border: 2px solid #808080;
+        border-radius: 5px;
+
+        :focus{
+            border:2px solid #41b57d;
+        }
+    }
 `;
 
 export const ContainerLabel = styled.div`

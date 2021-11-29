@@ -3,13 +3,23 @@ import { FaUniversalAccess } from "react-icons/fa";
 import Logo from "../../assets/logo.png";
 import { Link } from 'react-router-dom';
 import { useNavigate } from "react-router-dom";
+import { useContext } from "react";
+import { AuthContext } from "../../providers/auth";
 
 export const Header = () => {
+
+  const { auth, handleAuth } = useContext(AuthContext);
 
   const navigate = useNavigate();
 
   const handleToPageRegister = () => {
     navigate("/register")
+  }
+
+  const handleLogout = () => {
+    localStorage.clear("@pdctech:token")
+    handleAuth(null)
+    navigate("/")
   }
 
   return (
@@ -43,10 +53,10 @@ export const Header = () => {
               <Link to="/about-us"><li>Quem somos</li></Link>
               <Link to="/dashboard"><li>Canditados</li></Link>
               <Link to="/community"><li>Comunidades</li></Link>
-              <Link to="/login"><li>Login</li></Link>
+              {!auth && (<Link to="/login"><li>Login</li></Link>)}
             </ul>
           </nav>
-          <button onClick={ handleToPageRegister }>Cadastre-se</button>
+          {!auth ? <button onClick={ handleToPageRegister }>Cadastre-se</button> : <button onClick={ handleLogout }>Logout</button> }
         </div>
       </MainHeader>
     </Container>

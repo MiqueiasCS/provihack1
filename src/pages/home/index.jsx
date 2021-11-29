@@ -7,9 +7,13 @@ import { RiUserSmileLine } from "react-icons/ri";
 import { Header } from "../../components/header";
 import { Footer } from "../../components/footer";
 import { useNavigate } from "react-router-dom";
+import { useContext } from "react";
+import { AuthContext } from "../../providers/auth";
 
 
 export const Home = () => {
+
+  const { auth } = useContext(AuthContext);
 
   const navigate = useNavigate();
 
@@ -18,9 +22,12 @@ export const Home = () => {
   }
 
   const handleToPageRegister = () => {
-    navigate("/register")
+    if(!!auth){
+      navigate("/dashboard")
+    } else {
+      navigate("/register")
+    }
   }
-
 
   return (
     <Container>

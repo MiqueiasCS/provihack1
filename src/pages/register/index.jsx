@@ -25,6 +25,7 @@ export const Register = () => {
         "Apenas alfabetos são permitidos para este campo!"
       ),
     email: yup.string().email("Email Inválido!").required("Campo Obrigatório!"),
+    photo: yup.string(),
     function: yup.string().required("Campo Obrigatório!"),
     nivel: yup.string().required("Campo Obrigatório!"),
     city: yup.string().required("Campo Obrigatório!"),
@@ -69,7 +70,16 @@ export const Register = () => {
         </ContainerText>
 
         <ContainerText>
-          <p>Insira uma foto de perfil</p>
+          <div>
+            <label>Insira uma foto de perfil</label>
+          </div>
+          <div>
+            <input className="input-photo"
+              type="text" 
+              placeholder="Link da sua foto"
+              {...register("photo")}
+            />
+          </div>
         </ContainerText>
 
         <form onSubmit={handleSubmit(handleMyForm)}>

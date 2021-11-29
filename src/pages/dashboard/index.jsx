@@ -28,9 +28,6 @@ export const Dashboard = () => {
       <div className="next_page">
         <NextPage />
       </div>
-      <button onClick={() => console.log(filteredUsers)}>
-        usuarios cadastrados
-      </button>
       <Footer />
     </Container>
   );

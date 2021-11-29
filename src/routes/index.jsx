@@ -8,6 +8,7 @@ import { Community } from '../pages/community';
 import { AboutUs } from "../pages/aboutus";
 
 export const Routes = () => {
+    
 
     return (
         <Switch>
