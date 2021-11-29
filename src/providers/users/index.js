@@ -1,28 +1,11 @@
 import { createContext, useState, useEffect } from "react";
 import api from "../../services/api";
 import { toast } from "react-toastify";
-// import * as qs from "qs";
 
 export const UsersContext = createContext();
 
 export const UsersProviders = ({ children }) => {
   const [users, setUsers] = useState([]);
-
-  //   const CLIENT_ID = "provihack";
-  //   const CLIENT_SECRET = "provihack";
-
-  //   const login = (loginData) => {
-  //     const headers = {
-  //       "Content-Type": "application/x-www-form-urlencoded",
-  //       Authorization: "Basic " + window.btoa(CLIENT_ID + ":" + CLIENT_SECRET),
-  //     };
-  //     const data = qs.stringify({ ...loginData, grant_type: "password" });
-
-  //     api
-  //       .post("/oauth/token", data, headers)
-  //       .then((response) => console.log(response))
-  //       .catch((e) => console.log(e));
-  //   };
 
   const createUser = (data, navigate) => {
     api
@@ -100,10 +83,3 @@ export const UsersProviders = ({ children }) => {
     </UsersContext.Provider>
   );
 };
-
-//get,post /users
-//user_by_id get /users/<id>
-//delete /users/<id>
-//put /users/<id>
-// users?nivel=júnior get
-// oauth/token -> *** post
