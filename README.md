@@ -55,6 +55,6 @@ $ git clone <https://github.com/issdomingoss/provihack1.git>
 # Execute a aplicação em modo de desenvolvimento.
 $ yarn start
 
-# O servidor inciará na porta:3030 - acesse <http://localhost:3000>
+# O servidor inciará na porta:3000 - acesse <http://localhost:3000>
 
 ```
