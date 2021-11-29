@@ -1,70 +1,68 @@
-# Getting Started with Create React App
+<h1 align="center">
+    <img src="https://i.imgur.com/V6SW4Cx.png" /><br><br>
+</h1>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<p align="center">🚀 Plataforma criada para usuários com dificiências cadastrarem seus curriculos na área tech.</p>
 
-## Available Scripts
+<h4 align="center"> 
+    🚧  PCD TECH 🚀 Primeira versão concluída.  🚧
+</h4>
 
-In the project directory, you can run:
+<h2 align="center"> 
+    Preview da tela home do site.
+</h2>
+<h1 align="center">
+    <img width="800px" hight="300px" src="https://i.imgur.com/iJ0CmdI.png" /><br><br>
+</h1>
 
-### `yarn start`
+### ⚙️ Funcionalidades
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- [x] Os usuários podem se cadastrar na plataforma web.
+- [x] Efetuar Login por meio do email e senha.
+- [x] Pesquisa de usuários
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## 🚀 Tecnologias
 
-### `yarn test`
+- [x] Linguagem de programação: JavaScript
+- [x] Framework: ReactJs
+- [x] IDE: VScode
+- [x] Node
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## ⚡ Implementações Futuras 
 
-### `yarn build`
+- [ ] Responsividade
+- [ ] Acessibilidade
+- [ ] Adicionar plataforma de comunidades.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 🎨 Layout
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+O protótipo da aplicação está disponível no Figma: [WIREFRAME](https://www.figma.com/file/BKl1PAL3zNWOTS0N4BKXnD/Prot%C3%B3tipo?node-id=3%3A168)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Pré-requisitos
 
-### `yarn eject`
+Antes de começar, você vai precisar ter instalado em sua máquina as seguintes ferramentas:
+[Git](https://git-scm.com/), [NodeJs](https://nodejs.org/en/) um Framework da linguagem javaScript
+[React](https://pt-br.reactjs.org/)
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Além disto uma IDE para JAVASCRIPT como por exemplo o [VScode](https://code.visualstudio.com/).
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### 🎲 Rodando o Front End
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+# Clone este repositório
+$ git clone <https://github.com/issdomingoss/provihack1.git>
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+# Execute a aplicação em modo de desenvolvimento.
+$ yarn start
 
-## Learn More
+# O servidor inciará na porta:3030 - acesse <http://localhost:3000>
+Node.js
+Node.js
+Node.js® is a JavaScript runtime built on Chrome's V8 JavaScript engine.
+Imagem
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+<h1 align="center">
+    <img src="https://i.imgur.com/V6SW4Cx.png" /><br><br>
+</h1>
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<p align="center">🚀 Plataforma criada para usuários com dificiências cadastrarem seus curriculos na área tech.</p>
