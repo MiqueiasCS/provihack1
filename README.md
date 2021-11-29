@@ -5,11 +5,11 @@
 <p align="center">🚀 Plataforma criada para usuários com dificiências cadastrarem seus curriculos na área tech.</p>
 
 <h4 align="center"> 
-    🚧  PCD TECH 🚀 Primeira versão concluída.  🚧
+	🚧  PCD TECH 🚀 Primeira versão concluída.  🚧
 </h4>
 
 <h2 align="center"> 
-    Preview da tela home do site.
+	Preview da tela home do site.
 </h2>
 <h1 align="center">
     <img width="800px" hight="300px" src="https://i.imgur.com/iJ0CmdI.png" /><br><br>
@@ -41,13 +41,14 @@ O protótipo da aplicação está disponível no Figma: [WIREFRAME](https://www.
 ### Pré-requisitos
 
 Antes de começar, você vai precisar ter instalado em sua máquina as seguintes ferramentas:
-[Git](https://git-scm.com/), [NodeJs](https://nodejs.org/en/) um Framework da linguagem javaScript
+[Git](https://git-scm.com), [NodeJs](https://nodejs.org/en/) um Framework da linguagem javaScript
 [React](https://pt-br.reactjs.org/)
 
 Além disto uma IDE para JAVASCRIPT como por exemplo o [VScode](https://code.visualstudio.com/).
 
 ### 🎲 Rodando o Front End
 
+```bash
 # Clone este repositório
 $ git clone <https://github.com/issdomingoss/provihack1.git>
 
@@ -55,14 +56,5 @@ $ git clone <https://github.com/issdomingoss/provihack1.git>
 $ yarn start
 
 # O servidor inciará na porta:3030 - acesse <http://localhost:3000>
-Node.js
-Node.js
-Node.js® is a JavaScript runtime built on Chrome's V8 JavaScript engine.
-Imagem
 
-
-<h1 align="center">
-    <img src="https://i.imgur.com/V6SW4Cx.png" /><br><br>
-</h1>
-
-<p align="center">🚀 Plataforma criada para usuários com dificiências cadastrarem seus curriculos na área tech.</p>
+```
