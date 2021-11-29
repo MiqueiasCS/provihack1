@@ -8,12 +8,18 @@ import { AuthContext } from "../../providers/auth";
 
 export const Header = () => {
 
-  const { auth } = useContext(AuthContext);
+  const { auth, handleAuth } = useContext(AuthContext);
 
   const navigate = useNavigate();
 
   const handleToPageRegister = () => {
     navigate("/register")
+  }
+
+  const handleLogout = () => {
+    localStorage.clear("@pdctech:token")
+    handleAuth(null)
+    navigate("/")
   }
 
   return (
@@ -50,7 +56,7 @@ export const Header = () => {
               {!auth && (<Link to="/login"><li>Login</li></Link>)}
             </ul>
           </nav>
-          {!auth && (<button onClick={ handleToPageRegister }>Cadastre-se</button>)}
+          {!auth ? <button onClick={ handleToPageRegister }>Cadastre-se</button> : <button onClick={ handleLogout }>Logout</button> }
         </div>
       </MainHeader>
     </Container>

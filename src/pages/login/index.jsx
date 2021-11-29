@@ -12,13 +12,14 @@ import {
 } from "./style";
 
 import Logo from "../../assets/logo.png";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import { useContext } from "react";
 
 export const Login = () => {
 
-  const { handleAuth } = useContext(AuthContext);
+  const { auth, handleAuth } = useContext(AuthContext);
+  const navigate = useNavigate();
 
   const schema = yup.object().shape({
     email: yup.string().email("Email Inválido!").required("Campo Obrigatório!"),
@@ -61,6 +62,10 @@ export const Login = () => {
     reset();
 
   };
+
+  if(!!auth){
+    navigate("/dashboard")
+  }
 
   return (
     <>
