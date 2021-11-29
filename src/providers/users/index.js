@@ -8,21 +8,29 @@ export const UsersContext = createContext();
 export const UsersProviders = ({ children }) => {
   const [users, setUsers] = useState([]);
 
-  //   const CLIENT_ID = "provihack";
-  //   const CLIENT_SECRET = "provihack";
+    // // BASIC
+    // const CLIENT_ID = "provihack";
+    // const CLIENT_SECRET = "provihack";
 
-  //   const login = (loginData) => {
-  //     const headers = {
-  //       "Content-Type": "application/x-www-form-urlencoded",
-  //       Authorization: "Basic " + window.btoa(CLIENT_ID + ":" + CLIENT_SECRET),
-  //     };
-  //     const data = qs.stringify({ ...loginData, grant_type: "password" });
+    // // HEADER
+    // const CONTENT_TYPE = "application/x-www-form-urlencoded";
 
-  //     api
-  //       .post("/oauth/token", data, headers)
-  //       .then((response) => console.log(response))
-  //       .catch((e) => console.log(e));
-  //   };
+    // const login = (infoData) => {
+      
+    //   const headers = {
+    //     "Content-Type": CONTENT_TYPE,
+    //     Authorization: "Basic " + window.btoa(CLIENT_ID + ":" + CLIENT_SECRET),
+    //   };
+
+    
+      
+    //   const data = qs.stringify({ ...infoData, grant_type: "password" });
+
+    //   api
+    //     .post("/oauth/token", data, headers)
+    //     .then((response) => console.log(response))
+    //     .catch((e) => console.log(e));
+    // };
 
   const createUser = (data, navigate) => {
     api

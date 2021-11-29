@@ -1,14 +1,14 @@
-import { PersonaProvider } from './persona';
 import {  UsersProviders} from './users';
+import { AuthProvider } from './auth';
 
 
 const Providers = ({ children }) => {
     return(
-        <PersonaProvider>
+        <AuthProvider>
             <UsersProviders>
             { children }
             </UsersProviders>
-        </PersonaProvider>
+        </AuthProvider>
     );
 };
 

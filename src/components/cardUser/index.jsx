@@ -6,19 +6,19 @@ export const PersonCard = ({ person }) => {
         <ContainerCard>
             <div className="container-flex">
                 <ContainerSub>
-                    <img alt="img_perfil" />
+                    <img alt="img_perfil" src={person.photo}/>
                 </ContainerSub>
                 
                 <ContainerSub>
-                    <p>{person.function}</p>
+                    <p>Programador(a) {person.nivel}</p>
                     <h2>{person.name}</h2>
-                    <p className="email"><strong>{person.email}</strong></p>
-                    <p>{person.description}</p>
+                    <p className="email">{person.email}</p>
+                    <p className="description">{person.description}</p>
                 </ContainerSub>
             </div>
             <ContainerSub>
                 <p>{person.city}-{person.state}</p>
-                <button>{person.url}</button>
+                <a href={person.url} target="_blank" rel="noreferrer"><button>Link Currículo</button></a>
             </ContainerSub>
         </ContainerCard>
     );

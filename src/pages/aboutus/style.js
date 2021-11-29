@@ -13,7 +13,6 @@ export const ContainerAboutUs = styled.div`
         margin-top: 100px;
     }
     
-
 `;
 
 export const ContainerFlex = styled.div`

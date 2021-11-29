@@ -26,6 +26,7 @@ export const ContainerCard = styled.div`
     .container-flex{
         display: flex;
         flex-direction: row;
+        align-items: center;
     }
 
     :hover{
@@ -44,6 +45,17 @@ export const ContainerSub = styled.div`
 
     h2{
         margin: 15px 0px;
+    }
+
+    .description{
+        color:#808080;
+    }
+
+    img{
+        width: 100px;
+        height: 100px;
+        border-radius: 100%;
+        margin-right: 20px;
     }
 
     .email{

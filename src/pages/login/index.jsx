@@ -1,6 +1,8 @@
 import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { useForm } from "react-hook-form";
+import * as qs from "qs";
+import { AuthContext } from '../../providers/auth';
 import {
   ContainerLogin,
   ContainerTextLogin,
@@ -8,13 +10,15 @@ import {
   Form,
   ContainerAccess,
 } from "./style";
-import { useContext } from "react";
-import { UsersContext } from "../../providers/users";
+
 import Logo from "../../assets/logo.png";
 import { Link } from "react-router-dom";
+import axios from "axios";
+import { useContext } from "react";
 
 export const Login = () => {
-  const { login } = useContext(UsersContext);
+
+  const { handleAuth } = useContext(AuthContext);
 
   const schema = yup.object().shape({
     email: yup.string().email("Email Inválido!").required("Campo Obrigatório!"),
@@ -34,10 +38,28 @@ export const Login = () => {
     reset,
   } = useForm({ resolver: yupResolver(schema) });
 
-  const handleMyForm = (data) => {
-    console.log(data);
-    login(data);
+
+    // HEADER
+  const CONTENT_TYPE = "application/x-www-form-urlencoded";
+
+  const handleLogin = (infoData) => {
+      
+    const headers = {
+      "Content-Type": CONTENT_TYPE,
+        Authorization: "Basic cHJvdmloYWNrOnByb3ZpaGFjaw==",
+      };
+
+    const data = qs.stringify({ username:infoData.email, password:infoData.password, grant_type: "password" });
+
+    axios
+      .post("https://pcdtech.herokuapp.com/oauth/token", data, { headers })
+      .then((response) => {
+        localStorage.setItem("@pcdtech:token", JSON.stringify(response.data.access_token))
+        handleAuth(response.data.access_token)
+      }).catch((e) => console.log(e.response));
+
     reset();
+
   };
 
   return (
@@ -66,7 +88,7 @@ export const Login = () => {
             </p>
           </div>
 
-          <Form onSubmit={handleSubmit(handleMyForm)}>
+          <Form onSubmit={handleSubmit(handleLogin)}>
             <div>
               <label>E-mail</label>
               <input
