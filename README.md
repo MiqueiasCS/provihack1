@@ -2,7 +2,7 @@
     <img src="https://i.imgur.com/V6SW4Cx.png" /><br><br>
 </h1>
 
-<p align="center">🚀 Plataforma criada para usuários com dificiências cadastrarem seus curriculos na área tech.</p>
+<p align="center">🚀 Plataforma criada para usuários com deficiências cadastrarem seus curriculos na área tech.</p>
 
 <h4 align="center"> 
 	🚧  PCD TECH 🚀 Primeira versão concluída.  🚧
