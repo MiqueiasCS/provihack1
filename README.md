@@ -52,6 +52,12 @@ Além disto uma IDE para JAVASCRIPT como por exemplo o [VScode](https://code.vis
 # Clone este repositório
 $ git clone <https://github.com/issdomingoss/provihack1.git>
 
+# entre na pasta
+$ cd provihack1/
+
+# instale as dependências
+$ yarn
+
 # Execute a aplicação em modo de desenvolvimento.
 $ yarn start
 
