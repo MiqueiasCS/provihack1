@@ -51,7 +51,7 @@ export const Header = () => {
             <ul>
               <Link to="/"><li>Home</li></Link>
               <Link to="/about-us"><li>Quem somos</li></Link>
-              <Link to="/dashboard"><li>Canditados</li></Link>
+              <Link to="/dashboard"><li>Candidatos</li></Link>
               <Link to="/community"><li>Comunidades</li></Link>
               {!auth && (<Link to="/login"><li>Login</li></Link>)}
             </ul>
