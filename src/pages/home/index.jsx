@@ -40,7 +40,7 @@ export const Home = () => {
             <h2>Faça Parte do nosso Banco de talentos</h2>
             <p>
               As melhores empresas utilizam o nosso banco de talentos 100% para
-              PDC
+              PCD
             </p>
             <button onClick={handleToPageRegister}>Cadastrar Currículo</button>
           </div>
